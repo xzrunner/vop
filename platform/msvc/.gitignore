@@ -1,0 +1,8 @@
+vop/
+vop_test/
+projects/*
+
+!projects/vop.vcxproj
+!projects/vop.vcxproj.filters
+!projects/vop_test.vcxproj
+!projects/vop_test.vcxproj.filters

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="dataset">
+      <UniqueIdentifier>{e0256a83-2d6c-4f65-b2f3-15ee5f4879d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nodes">
+      <UniqueIdentifier>{e6a39c5e-04b3-45e4-a98e-2e112916f5d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utility">
+      <UniqueIdentifier>{f293478d-ee17-46e7-8a15-5be8c1b39e0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nodes\globals">
+      <UniqueIdentifier>{f3fbcb48-7d80-424c-9eb2-913f1c15ed26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dataset\node">
+      <UniqueIdentifier>{0bd26116-02bf-4bd8-906c-074e3f0d4afd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dataset\var">
+      <UniqueIdentifier>{a479a813-7117-4712-b005-c0d856a5cf2e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\source\RegistRTTR.cpp">
+      <Filter>utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\Node.cpp">
+      <Filter>dataset\node</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\VOP.cpp" />
+    <ClCompile Include="..\..\..\source\node\GeoGlobalParams.cpp">
+      <Filter>nodes\globals</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\node\GeoOutputVars.cpp">
+      <Filter>nodes\globals</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\include\vop\typedef.h">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\vop\Node.h">
+      <Filter>dataset\node</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\vop\VariableType.h">
+      <Filter>dataset\var</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\vop\Variable.h">
+      <Filter>dataset\var</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\vop\VOP.h" />
+    <ClInclude Include="..\..\..\include\vop\node\GeoGlobalParams.h">
+      <Filter>nodes\globals</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\vop\node\GeoOutputVars.h">
+      <Filter>nodes\globals</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
