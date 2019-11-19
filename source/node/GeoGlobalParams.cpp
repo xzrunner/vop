@@ -9,8 +9,8 @@ sm::vec3 GeoGlobalParams::Calc(size_t idx) const
 {
     switch (idx)
     {
-    case IDX_VERT:
-        return m_vertex;
+    case IDX_POS:
+        return m_pos;
     case IDX_COLOR:
         return m_color;
     case IDX_NORM:

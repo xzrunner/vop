@@ -12,7 +12,7 @@ class GeoGlobalParams : public Node
 public:
     enum OutPortIdx
     {
-        IDX_VERT = 0,
+        IDX_POS = 0,
         IDX_COLOR,
         IDX_NORM,
     };
@@ -29,12 +29,12 @@ public:
 
     virtual sm::vec3 Calc(size_t idx) const override;
 
-    void SetVertex(const sm::vec3& vertex) { m_vertex = vertex; }
+    void SetPos(const sm::vec3& pos) { m_pos = pos; }
     void SetColor(const sm::vec3& color) { m_color = color; }
     void SetNormal(const sm::vec3& normal) { m_normal = normal; }
 
 private:
-    sm::vec3 m_vertex;
+    sm::vec3 m_pos;
     sm::vec3 m_color;
     sm::vec3 m_normal;
 
