@@ -11,6 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\include\vop\Evaluator.h" />
     <ClInclude Include="..\..\..\include\vop\VOP.h" />
     <ClInclude Include="..\..\..\include\vop\Node.h" />
     <ClInclude Include="..\..\..\include\vop\node\GeoGlobalParams.h" />
@@ -20,6 +21,7 @@
     <ClInclude Include="..\..\..\include\vop\VariableType.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\source\Evaluator.cpp" />
     <ClCompile Include="..\..\..\source\VOP.cpp" />
     <ClCompile Include="..\..\..\source\Node.cpp" />
     <ClCompile Include="..\..\..\source\node\GeoGlobalParams.cpp" />

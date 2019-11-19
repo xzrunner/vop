@@ -19,6 +19,9 @@
     <Filter Include="dataset\var">
       <UniqueIdentifier>{a479a813-7117-4712-b005-c0d856a5cf2e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="eval">
+      <UniqueIdentifier>{32a60013-326d-4575-95af-f5d6ea1204d7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\source\RegistRTTR.cpp">
@@ -33,6 +36,9 @@
     </ClCompile>
     <ClCompile Include="..\..\..\source\node\GeoOutputVars.cpp">
       <Filter>nodes\globals</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\Evaluator.cpp">
+      <Filter>eval</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -54,6 +60,9 @@
     </ClInclude>
     <ClInclude Include="..\..\..\include\vop\node\GeoOutputVars.h">
       <Filter>nodes\globals</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\vop\Evaluator.h">
+      <Filter>eval</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
