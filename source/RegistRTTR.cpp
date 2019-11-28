@@ -1,3 +1,5 @@
+// base
+#include "vop/node/Subnetwork.h"
 // globals
 #include "vop/node/GeoGlobalParams.h"
 #include "vop/node/GeoOutputVars.h"
@@ -21,6 +23,8 @@ rttr::registration::class_<vop::Node>("vop::Node")
 	.method("GetImports", &vop::Node::GetImports)
 	.method("GetExports", &vop::Node::GetExports)
 ;
+
+REGIST_NODE_TYPE(Subnetwork, subnetwork)
 
 // creation
 REGIST_NODE_TYPE(GeoGlobalParams, geo_global_params)

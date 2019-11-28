@@ -22,6 +22,9 @@
     <Filter Include="eval">
       <UniqueIdentifier>{32a60013-326d-4575-95af-f5d6ea1204d7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="nodes\utility">
+      <UniqueIdentifier>{5957b6b1-e9a5-4c1d-90d2-6bfb1bcf4b83}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\source\RegistRTTR.cpp">
@@ -39,6 +42,9 @@
     </ClCompile>
     <ClCompile Include="..\..\..\source\Evaluator.cpp">
       <Filter>eval</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\node\Subnetwork.cpp">
+      <Filter>nodes\utility</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -63,6 +69,9 @@
     </ClInclude>
     <ClInclude Include="..\..\..\include\vop\Evaluator.h">
       <Filter>eval</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\vop\node\Subnetwork.h">
+      <Filter>nodes\utility</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
