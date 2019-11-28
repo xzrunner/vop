@@ -2,16 +2,14 @@
 
 #include "vop/VariableType.h"
 
-#include <hdiop/NodeImpl.h>
+#include <hdiop/Node.h>
 
 #include <SM_Vector.h>
-
-#include <rttr/registration>
 
 namespace vop
 {
 
-class Node : public hdiop::NodeImpl<VariableType>
+class Node : public hdiop::Node<VariableType>
 {
 public:
     Node(size_t build_in_count = 0);
@@ -20,7 +18,7 @@ public:
 
     virtual void AddInputPorts(size_t num) {}
 
-    RTTR_ENABLE(hdiop::NodeImpl<VariableType>)
+    RTTR_ENABLE(hdiop::Node<VariableType>)
 
 }; // Node
 

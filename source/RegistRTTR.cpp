@@ -15,8 +15,8 @@ RTTR_REGISTRATION
 {
 
 // base
-rttr::registration::class_<hdiop::NodePort<vop::VariableType>>("sop::Node::Port")
-	.property("var", &hdiop::NodePort<vop::VariableType>::var)
+rttr::registration::class_<hdiop::Node<vop::VariableType>::Port>("sop::Node::Port")
+	.property("var", &hdiop::Node<vop::VariableType>::Port::var)
 ;
 
 rttr::registration::class_<vop::Node>("vop::Node")
