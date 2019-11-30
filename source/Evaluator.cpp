@@ -60,4 +60,10 @@ void Evaluator::ClearAllNodes()
     m_dirty = true;
 }
 
+NodePtr Evaluator::FindNode(const std::string& name) const
+{
+    auto itr = m_nodes_map.find(name);
+    return itr == m_nodes_map.end() ? nullptr : itr->second;
+}
+
 }

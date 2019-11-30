@@ -15,6 +15,10 @@ public:
     void RemoveNode(const NodePtr& node);
     void ClearAllNodes();
 
+    auto& GetAllNodes() const { return m_nodes_sorted; }
+
+    NodePtr FindNode(const std::string& name) const;
+
 private:
     std::map<std::string, NodePtr> m_nodes_map;
 
