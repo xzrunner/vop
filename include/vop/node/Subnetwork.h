@@ -16,7 +16,7 @@ public:
     {
     }
 
-    virtual sm::vec3 Calc(size_t idx) const { return sm::vec3(); }
+    virtual hdiop::Variable Eval(size_t idx) const { return hdiop::Variable(); }
 
     void ClearChildren() { m_children.clear(); }
     static void AddChild(const std::shared_ptr<Subnetwork>& parent,

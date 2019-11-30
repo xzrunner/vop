@@ -5,22 +5,18 @@ namespace vop
 namespace node
 {
 
-sm::vec3 GeoGlobalParams::Calc(size_t idx) const
+hdiop::Variable GeoGlobalParams::Eval(size_t idx) const
 {
     switch (idx)
     {
     case IDX_POS:
-        return m_pos;
+        return hdiop::Variable(m_pos);
     case IDX_COLOR:
-        return m_color;
+        return hdiop::Variable(m_color);
     case IDX_NORM:
-        return m_normal;
+        return hdiop::Variable(m_normal);
     default:
-    {
-        sm::vec3 ret;
-        ret.MakeInvalid();;
-        return ret;
-    }
+        return hdiop::Variable();
     }
 }
 

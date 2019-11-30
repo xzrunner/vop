@@ -27,7 +27,7 @@ public:
         };
     }
 
-    virtual sm::vec3 Calc(size_t idx) const override;
+    virtual hdiop::Variable Eval(size_t idx) const override;
 
     void SetPos(const sm::vec3& pos) { m_pos = pos; }
     void SetColor(const sm::vec3& color) { m_color = color; }

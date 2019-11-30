@@ -1,15 +1,14 @@
 #include "vop/node/GeoOutputVars.h"
+#include "vop/NodeHelper.h"
 
 namespace vop
 {
 namespace node
 {
 
-sm::vec3 GeoOutputVars::Calc(size_t idx) const
+hdiop::Variable GeoOutputVars::Eval(size_t idx) const
 {
-    sm::vec3 ret;
-    ret.MakeInvalid();
-    return ret;
+    return hdiop::Variable();
 }
 
 sm::vec3 GeoOutputVars::GetPos() const
@@ -29,24 +28,18 @@ sm::vec3 GeoOutputVars::GetNormal() const
 
 sm::vec3 GeoOutputVars::CalcIn(size_t idx) const
 {
-    sm::vec3 ret;
-    ret.MakeInvalid();
-
-    assert(idx >= 0 && idx < m_imports.size());
-    auto& conns = m_imports[idx].conns;
-    if (conns.empty()) {
+    auto var = NodeHelper::EvalInputNode(*this, idx);
+    if (var.type == hdiop::VarType::Invalid) 
+    {
+        sm::vec3 ret;
+        ret.MakeInvalid();
         return ret;
     }
-
-    assert(conns.size() == 1);
-    auto& conn = conns.front();
-    auto in_node = conn.node.lock();
-    if (!in_node) {
-        return ret;
+    else
+    {
+        assert(var.type == hdiop::VarType::Float3);
+        return *static_cast<const sm::vec3*>(var.p);
     }
-
-    assert(in_node->get_type().is_derived_from<Node>());
-    return std::static_pointer_cast<Node>(in_node)->Calc(conn.idx);
 }
 
 }
