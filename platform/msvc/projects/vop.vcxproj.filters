@@ -54,12 +54,6 @@
     <ClInclude Include="..\..\..\include\vop\Node.h">
       <Filter>dataset\node</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\vop\VariableType.h">
-      <Filter>dataset\var</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\include\vop\Variable.h">
-      <Filter>dataset\var</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\include\vop\VOP.h" />
     <ClInclude Include="..\..\..\include\vop\node\GeoGlobalParams.h">
       <Filter>nodes\globals</Filter>

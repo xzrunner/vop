@@ -21,9 +21,9 @@ public:
     GeoOutputVars()
     {
         m_imports = {
-            {{ VariableType::Float3, "P" }},
-            {{ VariableType::Float3, "Cd" }},
-            {{ VariableType::Float3, "N" }}
+            {{ hdiop::VarType::Float3, "P" }},
+            {{ hdiop::VarType::Float3, "Cd" }},
+            {{ hdiop::VarType::Float3, "N" }}
         };
     }
 

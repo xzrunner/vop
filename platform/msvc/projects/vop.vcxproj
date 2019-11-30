@@ -18,8 +18,6 @@
     <ClInclude Include="..\..\..\include\vop\node\GeoGlobalParams.h" />
     <ClInclude Include="..\..\..\include\vop\node\GeoOutputVars.h" />
     <ClInclude Include="..\..\..\include\vop\typedef.h" />
-    <ClInclude Include="..\..\..\include\vop\Variable.h" />
-    <ClInclude Include="..\..\..\include\vop\VariableType.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\source\Evaluator.cpp" />
