@@ -12,6 +12,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\include\vop\Evaluator.h" />
+    <ClInclude Include="..\..\..\include\vop\NodeHelper.h" />
+    <ClInclude Include="..\..\..\include\vop\node\Add.h" />
+    <ClInclude Include="..\..\..\include\vop\node\Constant.h" />
+    <ClInclude Include="..\..\..\include\vop\node\Multiply.h" />
     <ClInclude Include="..\..\..\include\vop\node\Subnetwork.h" />
     <ClInclude Include="..\..\..\include\vop\VOP.h" />
     <ClInclude Include="..\..\..\include\vop\Node.h" />
@@ -21,6 +25,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\source\Evaluator.cpp" />
+    <ClCompile Include="..\..\..\source\NodeHelper.cpp" />
+    <ClCompile Include="..\..\..\source\node\Add.cpp" />
+    <ClCompile Include="..\..\..\source\node\Constant.cpp" />
+    <ClCompile Include="..\..\..\source\node\Multiply.cpp" />
     <ClCompile Include="..\..\..\source\node\Subnetwork.cpp" />
     <ClCompile Include="..\..\..\source\VOP.cpp" />
     <ClCompile Include="..\..\..\source\Node.cpp" />
