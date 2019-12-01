@@ -57,6 +57,8 @@ void Evaluator::ClearAllNodes()
     m_nodes_map.clear();
     m_nodes_sorted.clear();
 
+    m_next_id = 0;
+
     m_dirty = true;
 }
 
