@@ -25,6 +25,12 @@
     <Filter Include="tools">
       <UniqueIdentifier>{f293478d-ee17-46e7-8a15-5be8c1b39e0f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="dataset\parameters">
+      <UniqueIdentifier>{3cff9466-9634-4b36-9745-29461552e43d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nodes\vector">
+      <UniqueIdentifier>{f6400ad9-d38d-4c7e-b949-30972bb89382}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\source\RegistRTTR.cpp">
@@ -58,6 +64,15 @@
     <ClCompile Include="..\..\..\source\NodeHelper.cpp">
       <Filter>tools</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\source\node\SetVectorComponent.cpp">
+      <Filter>nodes\vector</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\node\GetVectorComponent.cpp">
+      <Filter>nodes\vector</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\node\Compare.cpp">
+      <Filter>nodes\utility</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\include\vop\Node.h">
@@ -88,6 +103,36 @@
     <ClInclude Include="..\..\..\include\vop\typedef.h" />
     <ClInclude Include="..\..\..\include\vop\NodeHelper.h">
       <Filter>tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\vop\node\Constant.parm.h">
+      <Filter>nodes\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\vop\node_parms_gen.h">
+      <Filter>dataset\parameters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\vop\node\SetVectorComponent.h">
+      <Filter>nodes\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\vop\node\GetVectorComponent.h">
+      <Filter>nodes\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\vop\node\Compare.h">
+      <Filter>nodes\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\vop\node\Compare.parm.h">
+      <Filter>nodes\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\vop\ComponentType.h">
+      <Filter>nodes\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\vop\node\GetSetVec2Comp.parm.h">
+      <Filter>nodes\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\vop\node\GetSetVec3Comp.parm.h">
+      <Filter>nodes\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\vop\node\GetSetVec4Comp.parm.h">
+      <Filter>nodes\vector</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

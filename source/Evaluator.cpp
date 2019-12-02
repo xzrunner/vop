@@ -62,6 +62,16 @@ void Evaluator::ClearAllNodes()
     m_dirty = true;
 }
 
+void Evaluator::Connect(const hdiop::Node<hdiop::VarType>::PortAddr& from, const hdiop::Node<hdiop::VarType>::PortAddr& to)
+{
+    hdiop::make_connecting<hdiop::VarType>(from, to);
+}
+
+void Evaluator::Disconnect(const hdiop::Node<hdiop::VarType>::PortAddr& from, const hdiop::Node<hdiop::VarType>::PortAddr& to)
+{
+    hdiop::disconnect<hdiop::VarType>(from, to);
+}
+
 NodePtr Evaluator::FindNode(const std::string& name) const
 {
     auto itr = m_nodes_map.find(name);

@@ -8,6 +8,10 @@ namespace node
 
 hdiop::Variable Multiply::Eval(size_t idx) const
 {
+    if (idx != 0) {
+        return hdiop::Variable();
+    }
+
     auto var0 = NodeHelper::EvalInputNode(*this, 0);
     auto var1 = NodeHelper::EvalInputNode(*this, 1);
     if (var0.type == hdiop::VarType::Invalid ||
@@ -17,6 +21,17 @@ hdiop::Variable Multiply::Eval(size_t idx) const
 
     switch (var0.type)
     {
+    case hdiop::VarType::Int:
+    {
+        switch (var1.type)
+        {
+        case hdiop::VarType::Int:
+            return hdiop::Variable(var0.i * var1.i);
+        default:
+            assert(0);
+        }
+    }
+        break;
     case hdiop::VarType::Float:
     {
         auto v0 = var0.f;

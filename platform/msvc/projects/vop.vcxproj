@@ -11,12 +11,22 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\include\vop\ComponentType.h" />
     <ClInclude Include="..\..\..\include\vop\Evaluator.h" />
     <ClInclude Include="..\..\..\include\vop\NodeHelper.h" />
     <ClInclude Include="..\..\..\include\vop\node\Add.h" />
+    <ClInclude Include="..\..\..\include\vop\node\Compare.h" />
+    <ClInclude Include="..\..\..\include\vop\node\Compare.parm.h" />
     <ClInclude Include="..\..\..\include\vop\node\Constant.h" />
+    <ClInclude Include="..\..\..\include\vop\node\Constant.parm.h" />
+    <ClInclude Include="..\..\..\include\vop\node\GetSetVec3Comp.parm.h" />
+    <ClInclude Include="..\..\..\include\vop\node\GetSetVec4Comp.parm.h" />
+    <ClInclude Include="..\..\..\include\vop\node\GetVectorComponent.h" />
+    <ClInclude Include="..\..\..\include\vop\node\GetSetVec2Comp.parm.h" />
     <ClInclude Include="..\..\..\include\vop\node\Multiply.h" />
+    <ClInclude Include="..\..\..\include\vop\node\SetVectorComponent.h" />
     <ClInclude Include="..\..\..\include\vop\node\Subnetwork.h" />
+    <ClInclude Include="..\..\..\include\vop\node_parms_gen.h" />
     <ClInclude Include="..\..\..\include\vop\VOP.h" />
     <ClInclude Include="..\..\..\include\vop\Node.h" />
     <ClInclude Include="..\..\..\include\vop\node\GeoGlobalParams.h" />
@@ -27,8 +37,11 @@
     <ClCompile Include="..\..\..\source\Evaluator.cpp" />
     <ClCompile Include="..\..\..\source\NodeHelper.cpp" />
     <ClCompile Include="..\..\..\source\node\Add.cpp" />
+    <ClCompile Include="..\..\..\source\node\Compare.cpp" />
     <ClCompile Include="..\..\..\source\node\Constant.cpp" />
+    <ClCompile Include="..\..\..\source\node\GetVectorComponent.cpp" />
     <ClCompile Include="..\..\..\source\node\Multiply.cpp" />
+    <ClCompile Include="..\..\..\source\node\SetVectorComponent.cpp" />
     <ClCompile Include="..\..\..\source\node\Subnetwork.cpp" />
     <ClCompile Include="..\..\..\source\VOP.cpp" />
     <ClCompile Include="..\..\..\source\Node.cpp" />

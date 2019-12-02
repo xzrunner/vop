@@ -12,6 +12,19 @@ namespace node
 class Constant : public Node
 {
 public:
+    enum class Type
+    {
+        ConstFloat,
+        ConstInteger,
+        ConstToggle,
+        ConstAngle,
+        ConstFloat2,
+        ConstFloat3,
+        ConstFloat4,
+        ConstString,
+    };
+
+public:
     Constant()
     {
         m_exports = {
@@ -19,16 +32,13 @@ public:
         };
     }
 
-    virtual hdiop::Variable Eval(size_t idx) const override {
-        return m_value;
-    }
-
-    void SetValue(float v);
-
-private:
-    hdiop::Variable m_value;
+    virtual hdiop::Variable Eval(size_t idx) const override;
 
     RTTR_ENABLE(Node)
+
+#define PARM_FILEPATH "vop/node/Constant.parm.h"
+#include <hdiop/node_parms_gen.h>
+#undef PARM_FILEPATH
 
 }; // Constant
 

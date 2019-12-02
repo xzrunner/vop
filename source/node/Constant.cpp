@@ -5,9 +5,13 @@ namespace vop
 namespace node
 {
 
-void Constant::SetValue(float v)
+hdiop::Variable Constant::Eval(size_t idx) const 
 {
-    m_value = hdiop::Variable(v);
+    if (idx != 0) {
+        return hdiop::Variable();
+    }
+
+    return m_const_value;
 }
 
 }
