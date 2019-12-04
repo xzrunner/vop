@@ -2,8 +2,8 @@
 
 #include "vop/typedef.h"
 
-#include <hdiop/Node.h>
-#include <hdiop/VarType.h>
+#include <dag/Node.h>
+#include <dag/VarType.h>
 
 #include <map>
 #include <vector>
@@ -20,8 +20,8 @@ public:
     void ClearAllNodes();
 
     // update node conn
-    void Connect(const hdiop::Node<hdiop::VarType>::PortAddr& from, const hdiop::Node<hdiop::VarType>::PortAddr& to);
-    void Disconnect(const hdiop::Node<hdiop::VarType>::PortAddr& from, const hdiop::Node<hdiop::VarType>::PortAddr& to);
+    void Connect(const dag::Node<dag::VarType>::PortAddr& from, const dag::Node<dag::VarType>::PortAddr& to);
+    void Disconnect(const dag::Node<dag::VarType>::PortAddr& from, const dag::Node<dag::VarType>::PortAddr& to);
 
     auto& GetAllNodes() const { return m_nodes_sorted; }
 

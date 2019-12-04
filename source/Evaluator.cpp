@@ -62,14 +62,14 @@ void Evaluator::ClearAllNodes()
     m_dirty = true;
 }
 
-void Evaluator::Connect(const hdiop::Node<hdiop::VarType>::PortAddr& from, const hdiop::Node<hdiop::VarType>::PortAddr& to)
+void Evaluator::Connect(const dag::Node<dag::VarType>::PortAddr& from, const dag::Node<dag::VarType>::PortAddr& to)
 {
-    hdiop::make_connecting<hdiop::VarType>(from, to);
+    dag::make_connecting<dag::VarType>(from, to);
 }
 
-void Evaluator::Disconnect(const hdiop::Node<hdiop::VarType>::PortAddr& from, const hdiop::Node<hdiop::VarType>::PortAddr& to)
+void Evaluator::Disconnect(const dag::Node<dag::VarType>::PortAddr& from, const dag::Node<dag::VarType>::PortAddr& to)
 {
-    hdiop::disconnect<hdiop::VarType>(from, to);
+    dag::disconnect<dag::VarType>(from, to);
 }
 
 NodePtr Evaluator::FindNode(const std::string& name) const

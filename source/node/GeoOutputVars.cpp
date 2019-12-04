@@ -6,9 +6,9 @@ namespace vop
 namespace node
 {
 
-hdiop::Variable GeoOutputVars::Eval(size_t idx) const
+dag::Variable GeoOutputVars::Eval(size_t idx) const
 {
-    return hdiop::Variable();
+    return dag::Variable();
 }
 
 sm::vec3 GeoOutputVars::GetPos() const
@@ -29,7 +29,7 @@ sm::vec3 GeoOutputVars::GetNormal() const
 sm::vec3 GeoOutputVars::CalcIn(size_t idx) const
 {
     auto var = NodeHelper::EvalInputNode(*this, idx);
-    if (var.type == hdiop::VarType::Invalid) 
+    if (var.type == dag::VarType::Invalid) 
     {
         sm::vec3 ret;
         ret.MakeInvalid();
@@ -37,7 +37,7 @@ sm::vec3 GeoOutputVars::CalcIn(size_t idx) const
     }
     else
     {
-        assert(var.type == hdiop::VarType::Float3);
+        assert(var.type == dag::VarType::Float3);
         return *static_cast<const sm::vec3*>(var.p);
     }
 }

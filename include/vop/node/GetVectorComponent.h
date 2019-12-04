@@ -14,19 +14,19 @@ public:
     GetVec2Comp()
     {
         m_imports = {
-            {{ hdiop::VarType::Float2, "vec2" }}
+            {{ dag::VarType::Float2, "vec2" }}
         };
         m_exports = {
-            {{ hdiop::VarType::Float, "fval" }}
+            {{ dag::VarType::Float, "fval" }}
         };
     }
 
-    virtual hdiop::Variable Eval(size_t idx) const override;
+    virtual dag::Variable Eval(size_t idx) const override;
 
     RTTR_ENABLE(Node)
 
 #define PARM_FILEPATH "vop/node/GetSetVec2Comp.parm.h"
-#include <hdiop/node_parms_gen.h>
+#include <dag/node_parms_gen.h>
 #undef PARM_FILEPATH
 
 }; // GetVec2Comp
@@ -37,19 +37,19 @@ public:
     GetVec3Comp()
     {
         m_imports = {
-            {{ hdiop::VarType::Float3, "vec3" }}
+            {{ dag::VarType::Float3, "vec3" }}
         };
         m_exports = {
-            {{ hdiop::VarType::Float, "fval" }}
+            {{ dag::VarType::Float, "fval" }}
         };
     }
 
-    virtual hdiop::Variable Eval(size_t idx) const override;
+    virtual dag::Variable Eval(size_t idx) const override;
 
     RTTR_ENABLE(Node)
 
 #define PARM_FILEPATH "vop/node/GetSetVec3Comp.parm.h"
-#include <hdiop/node_parms_gen.h>
+#include <dag/node_parms_gen.h>
 #undef PARM_FILEPATH
 
 }; // GetVec3Comp
@@ -60,19 +60,19 @@ public:
     GetVec4Comp()
     {
         m_imports = {
-            {{ hdiop::VarType::Float4, "vec4" }}
+            {{ dag::VarType::Float4, "vec4" }}
         };
         m_exports = {
-            {{ hdiop::VarType::Float, "fval" }}
+            {{ dag::VarType::Float, "fval" }}
         };
     }
 
-    virtual hdiop::Variable Eval(size_t idx) const override;
+    virtual dag::Variable Eval(size_t idx) const override;
 
     RTTR_ENABLE(Node)
 
 #define PARM_FILEPATH "vop/node/GetSetVec4Comp.parm.h"
-#include <hdiop/node_parms_gen.h>
+#include <dag/node_parms_gen.h>
 #undef PARM_FILEPATH
 
 }; // GetVec4Comp

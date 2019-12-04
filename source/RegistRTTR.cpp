@@ -29,8 +29,8 @@ RTTR_REGISTRATION
 {
 
 // base
-rttr::registration::class_<hdiop::Node<hdiop::VarType>::Port>("vop::Node::Port")
-	.property("var", &hdiop::Node<hdiop::VarType>::Port::var)
+rttr::registration::class_<dag::Node<dag::VarType>::Port>("vop::Node::Port")
+	.property("var", &dag::Node<dag::VarType>::Port::var)
 ;
 
 rttr::registration::class_<vop::Node>("vop::Node")
@@ -51,7 +51,7 @@ rttr::registration::class_<vop::node::Compare>("vop::compare")
 .constructor<>()
 #define PARM_FILEPATH "vop/node/Compare.parm.h"
 #define PARM_NODE_CLASS vop::node::Compare
-#include <hdiop/rttr_prop_gen.h>
+#include <dag/rttr_prop_gen.h>
 #undef PARM_NODE_CLASS
 #undef PARM_FILEPATH
 ;
@@ -68,7 +68,7 @@ rttr::registration::class_<vop::node::Constant>("vop::constant")
 .constructor<>()
 #define PARM_FILEPATH "vop/node/Constant.parm.h"
 #define PARM_NODE_CLASS vop::node::Constant
-#include <hdiop/rttr_prop_gen.h>
+#include <dag/rttr_prop_gen.h>
 #undef PARM_NODE_CLASS
 #undef PARM_FILEPATH
 ;
@@ -108,7 +108,7 @@ rttr::registration::class_<vop::node::GetVec2Comp>("vop::get_vec2_comp")
 .constructor<>()
 #define PARM_FILEPATH "vop/node/GetSetVec2Comp.parm.h"
 #define PARM_NODE_CLASS vop::node::GetVec2Comp
-#include <hdiop/rttr_prop_gen.h>
+#include <dag/rttr_prop_gen.h>
 #undef PARM_NODE_CLASS
 #undef PARM_FILEPATH
 ;
@@ -116,7 +116,7 @@ rttr::registration::class_<vop::node::SetVec2Comp>("vop::set_vec2_comp")
 .constructor<>()
 #define PARM_FILEPATH "vop/node/GetSetVec2Comp.parm.h"
 #define PARM_NODE_CLASS vop::node::SetVec2Comp
-#include <hdiop/rttr_prop_gen.h>
+#include <dag/rttr_prop_gen.h>
 #undef PARM_NODE_CLASS
 #undef PARM_FILEPATH
 ;
@@ -124,7 +124,7 @@ rttr::registration::class_<vop::node::GetVec3Comp>("vop::get_vec3_comp")
 .constructor<>()
 #define PARM_FILEPATH "vop/node/GetSetVec3Comp.parm.h"
 #define PARM_NODE_CLASS vop::node::GetVec3Comp
-#include <hdiop/rttr_prop_gen.h>
+#include <dag/rttr_prop_gen.h>
 #undef PARM_NODE_CLASS
 #undef PARM_FILEPATH
 ;
@@ -132,7 +132,7 @@ rttr::registration::class_<vop::node::SetVec3Comp>("vop::set_vec3_comp")
 .constructor<>()
 #define PARM_FILEPATH "vop/node/GetSetVec3Comp.parm.h"
 #define PARM_NODE_CLASS vop::node::SetVec3Comp
-#include <hdiop/rttr_prop_gen.h>
+#include <dag/rttr_prop_gen.h>
 #undef PARM_NODE_CLASS
 #undef PARM_FILEPATH
 ;
@@ -140,7 +140,7 @@ rttr::registration::class_<vop::node::GetVec4Comp>("vop::get_vec4_comp")
 .constructor<>()
 #define PARM_FILEPATH "vop/node/GetSetVec4Comp.parm.h"
 #define PARM_NODE_CLASS vop::node::GetVec4Comp
-#include <hdiop/rttr_prop_gen.h>
+#include <dag/rttr_prop_gen.h>
 #undef PARM_NODE_CLASS
 #undef PARM_FILEPATH
 ;
@@ -148,7 +148,7 @@ rttr::registration::class_<vop::node::SetVec4Comp>("vop::set_vec4_comp")
 .constructor<>()
 #define PARM_FILEPATH "vop/node/GetSetVec4Comp.parm.h"
 #define PARM_NODE_CLASS vop::node::SetVec4Comp
-#include <hdiop/rttr_prop_gen.h>
+#include <dag/rttr_prop_gen.h>
 #undef PARM_NODE_CLASS
 #undef PARM_FILEPATH
 ;

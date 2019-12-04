@@ -16,7 +16,7 @@ public:
     {
     }
 
-    virtual hdiop::Variable Eval(size_t idx) const { return hdiop::Variable(); }
+    virtual dag::Variable Eval(size_t idx) const { return dag::Variable(); }
 
     void ClearChildren() { m_children.clear(); }
     static void AddChild(const std::shared_ptr<Subnetwork>& parent,

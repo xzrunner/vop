@@ -1,6 +1,6 @@
 #pragma once
 
-#include <hdiop/Variable.h>
+#include <dag/Variable.h>
 
 namespace vop
 {
@@ -10,7 +10,7 @@ class Node;
 class NodeHelper
 {
 public:
-    static hdiop::Variable EvalInputNode(const Node& node, size_t idx);
+    static dag::Variable EvalInputNode(const Node& node, size_t idx);
 
 }; // NodeHelper
 

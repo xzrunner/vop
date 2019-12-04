@@ -29,56 +29,56 @@ TEST_CASE("add")
     SECTION("int + int")
     {
         v0->SetConstType(vop::node::Constant::Type::ConstInteger);
-        v0->SetConstValue(hdiop::Variable(1));
+        v0->SetConstValue(dag::Variable(1));
 
         v1->SetConstType(vop::node::Constant::Type::ConstInteger);
-        v1->SetConstValue(hdiop::Variable(2));
+        v1->SetConstValue(dag::Variable(2));
 
-        test::check_value_approx(add->Eval(0), hdiop::Variable(3));
+        test::check_value_approx(add->Eval(0), dag::Variable(3));
     }
 
     SECTION("float + float")
     {
         v0->SetConstType(vop::node::Constant::Type::ConstFloat);
-        v0->SetConstValue(hdiop::Variable(1.1f));
+        v0->SetConstValue(dag::Variable(1.1f));
 
         v1->SetConstType(vop::node::Constant::Type::ConstFloat);
-        v1->SetConstValue(hdiop::Variable(2.2f));
+        v1->SetConstValue(dag::Variable(2.2f));
 
-        test::check_value_approx(add->Eval(0), hdiop::Variable(3.3f));
+        test::check_value_approx(add->Eval(0), dag::Variable(3.3f));
     }
 
     SECTION("float3 + float3")
     {
         v0->SetConstType(vop::node::Constant::Type::ConstFloat3);
-        v0->SetConstValue(hdiop::Variable(sm::vec3(1, 2, 3)));
+        v0->SetConstValue(dag::Variable(sm::vec3(1, 2, 3)));
 
         v1->SetConstType(vop::node::Constant::Type::ConstFloat3);
-        v1->SetConstValue(hdiop::Variable(sm::vec3(.1f, .2f, .3f)));
+        v1->SetConstValue(dag::Variable(sm::vec3(.1f, .2f, .3f)));
 
-        test::check_value_approx(add->Eval(0), hdiop::Variable(sm::vec3(1.1f, 2.2f, 3.3f)));
+        test::check_value_approx(add->Eval(0), dag::Variable(sm::vec3(1.1f, 2.2f, 3.3f)));
     }
 
     SECTION("float + float3")
     {
         v0->SetConstType(vop::node::Constant::Type::ConstFloat);
-        v0->SetConstValue(hdiop::Variable(1.1f));
+        v0->SetConstValue(dag::Variable(1.1f));
 
         v1->SetConstType(vop::node::Constant::Type::ConstFloat3);
-        v1->SetConstValue(hdiop::Variable(sm::vec3(.1f, .2f, .3f)));
+        v1->SetConstValue(dag::Variable(sm::vec3(.1f, .2f, .3f)));
 
-        test::check_value_approx(add->Eval(0), hdiop::Variable(sm::vec3(1.2f, 1.3f, 1.4f)));
+        test::check_value_approx(add->Eval(0), dag::Variable(sm::vec3(1.2f, 1.3f, 1.4f)));
     }
 
     SECTION("float3 + float")
     {
         v0->SetConstType(vop::node::Constant::Type::ConstFloat3);
-        v0->SetConstValue(hdiop::Variable(sm::vec3(.1f, .2f, .3f)));
+        v0->SetConstValue(dag::Variable(sm::vec3(.1f, .2f, .3f)));
 
         v1->SetConstType(vop::node::Constant::Type::ConstFloat);
-        v1->SetConstValue(hdiop::Variable(1.1f));
+        v1->SetConstValue(dag::Variable(1.1f));
 
-        test::check_value_approx(add->Eval(0), hdiop::Variable(sm::vec3(1.2f, 1.3f, 1.4f)));
+        test::check_value_approx(add->Eval(0), dag::Variable(sm::vec3(1.2f, 1.3f, 1.4f)));
     }
 }
 
@@ -103,44 +103,44 @@ TEST_CASE("multiply")
     SECTION("int * int")
     {
         v0->SetConstType(vop::node::Constant::Type::ConstInteger);
-        v0->SetConstValue(hdiop::Variable(2));
+        v0->SetConstValue(dag::Variable(2));
 
         v1->SetConstType(vop::node::Constant::Type::ConstInteger);
-        v1->SetConstValue(hdiop::Variable(3));
+        v1->SetConstValue(dag::Variable(3));
 
-        test::check_value_approx(mul->Eval(0), hdiop::Variable(6));
+        test::check_value_approx(mul->Eval(0), dag::Variable(6));
     }
 
     SECTION("float * float")
     {
         v0->SetConstType(vop::node::Constant::Type::ConstFloat);
-        v0->SetConstValue(hdiop::Variable(1.1f));
+        v0->SetConstValue(dag::Variable(1.1f));
 
         v1->SetConstType(vop::node::Constant::Type::ConstFloat);
-        v1->SetConstValue(hdiop::Variable(2.2f));
+        v1->SetConstValue(dag::Variable(2.2f));
 
-        test::check_value_approx(mul->Eval(0), hdiop::Variable(2.42f));
+        test::check_value_approx(mul->Eval(0), dag::Variable(2.42f));
     }
 
     SECTION("float * float3")
     {
         v0->SetConstType(vop::node::Constant::Type::ConstFloat);
-        v0->SetConstValue(hdiop::Variable(1.1f));
+        v0->SetConstValue(dag::Variable(1.1f));
 
         v1->SetConstType(vop::node::Constant::Type::ConstFloat3);
-        v1->SetConstValue(hdiop::Variable(sm::vec3(.1f, .2f, .3f)));
+        v1->SetConstValue(dag::Variable(sm::vec3(.1f, .2f, .3f)));
 
-        test::check_value_approx(mul->Eval(0), hdiop::Variable(sm::vec3(.11f, .22f, .33f)));
+        test::check_value_approx(mul->Eval(0), dag::Variable(sm::vec3(.11f, .22f, .33f)));
     }
 
     SECTION("float3 * float")
     {
         v0->SetConstType(vop::node::Constant::Type::ConstFloat3);
-        v0->SetConstValue(hdiop::Variable(sm::vec3(.1f, .2f, .3f)));
+        v0->SetConstValue(dag::Variable(sm::vec3(.1f, .2f, .3f)));
 
         v1->SetConstType(vop::node::Constant::Type::ConstFloat);
-        v1->SetConstValue(hdiop::Variable(1.1f));
+        v1->SetConstValue(dag::Variable(1.1f));
 
-        test::check_value_approx(mul->Eval(0), hdiop::Variable(sm::vec3(.11f, .22f, .33f)));
+        test::check_value_approx(mul->Eval(0), dag::Variable(sm::vec3(.11f, .22f, .33f)));
     }
 }

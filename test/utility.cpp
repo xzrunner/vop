@@ -28,23 +28,23 @@ void init()
     }
 }
 
-void check_value_approx(const hdiop::Variable& v0, const hdiop::Variable& v1)
+void check_value_approx(const dag::Variable& v0, const dag::Variable& v1)
 {
     REQUIRE(v0.type == v1.type);
     switch (v0.type)
     {
-    case hdiop::VarType::Invalid:
+    case dag::VarType::Invalid:
         break;
-    case hdiop::VarType::Bool:
+    case dag::VarType::Bool:
         REQUIRE(v0.b == v1.b);
         break;
-    case hdiop::VarType::Int:
+    case dag::VarType::Int:
         REQUIRE(v0.i == v1.i);
         break;
-    case hdiop::VarType::Float:
+    case dag::VarType::Float:
         REQUIRE(v0.f == Approx(v1.f));
         break;
-    case hdiop::VarType::Float3:
+    case dag::VarType::Float3:
     {
         auto f0 = static_cast<const float*>(v0.p);
         auto f1 = static_cast<const float*>(v1.p);
@@ -53,10 +53,10 @@ void check_value_approx(const hdiop::Variable& v0, const hdiop::Variable& v1)
         }
         break;
     }
-    case hdiop::VarType::Double:
+    case dag::VarType::Double:
         REQUIRE(v0.d == Approx(v1.d));
         break;
-    case hdiop::VarType::String:         
+    case dag::VarType::String:         
         REQUIRE(strcmp(
             static_cast<const char*>(v0.p), 
             static_cast<const char*>(v1.p)

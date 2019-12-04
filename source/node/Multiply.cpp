@@ -6,53 +6,53 @@ namespace vop
 namespace node
 {
 
-hdiop::Variable Multiply::Eval(size_t idx) const
+dag::Variable Multiply::Eval(size_t idx) const
 {
     if (idx != 0) {
-        return hdiop::Variable();
+        return dag::Variable();
     }
 
     auto var0 = NodeHelper::EvalInputNode(*this, 0);
     auto var1 = NodeHelper::EvalInputNode(*this, 1);
-    if (var0.type == hdiop::VarType::Invalid ||
-        var1.type == hdiop::VarType::Invalid) {
-        return hdiop::Variable();
+    if (var0.type == dag::VarType::Invalid ||
+        var1.type == dag::VarType::Invalid) {
+        return dag::Variable();
     }
 
     switch (var0.type)
     {
-    case hdiop::VarType::Int:
+    case dag::VarType::Int:
     {
         switch (var1.type)
         {
-        case hdiop::VarType::Int:
-            return hdiop::Variable(var0.i * var1.i);
+        case dag::VarType::Int:
+            return dag::Variable(var0.i * var1.i);
         default:
             assert(0);
         }
     }
         break;
-    case hdiop::VarType::Float:
+    case dag::VarType::Float:
     {
         auto v0 = var0.f;
         switch (var1.type)
         {
-        case hdiop::VarType::Float:
-            return hdiop::Variable(var0.f * var1.f);
-        case hdiop::VarType::Float3:
-            return hdiop::Variable(*static_cast<const sm::vec3*>(var1.p) * v0);
+        case dag::VarType::Float:
+            return dag::Variable(var0.f * var1.f);
+        case dag::VarType::Float3:
+            return dag::Variable(*static_cast<const sm::vec3*>(var1.p) * v0);
         default:
             assert(0);
         }
     }
         break;
-    case hdiop::VarType::Float3:
+    case dag::VarType::Float3:
     {
         auto v0 = static_cast<const sm::vec3*>(var0.p);
         switch (var1.type)
         {
-        case hdiop::VarType::Float:
-            return hdiop::Variable(*v0 * var1.f);
+        case dag::VarType::Float:
+            return dag::Variable(*v0 * var1.f);
         default:
             assert(0);
         }
@@ -62,7 +62,7 @@ hdiop::Variable Multiply::Eval(size_t idx) const
         assert(0);
     }
 
-    return hdiop::Variable();
+    return dag::Variable();
 }
 
 }

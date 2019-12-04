@@ -2,7 +2,7 @@
 
 #include "vop/Node.h"
 
-#include <hdiop/Variable.h>
+#include <dag/Variable.h>
 
 namespace vop
 {
@@ -28,16 +28,16 @@ public:
     Constant()
     {
         m_exports = {
-            {{ hdiop::VarType::Any, "Value" }}
+            {{ dag::VarType::Any, "Value" }}
         };
     }
 
-    virtual hdiop::Variable Eval(size_t idx) const override;
+    virtual dag::Variable Eval(size_t idx) const override;
 
     RTTR_ENABLE(Node)
 
 #define PARM_FILEPATH "vop/node/Constant.parm.h"
-#include <hdiop/node_parms_gen.h>
+#include <dag/node_parms_gen.h>
 #undef PARM_FILEPATH
 
 }; // Constant

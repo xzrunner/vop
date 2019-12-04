@@ -29,21 +29,21 @@ public:
     GeoGlobalParams()
     {
         m_exports = {
-            {{ hdiop::VarType::Float3, "P" }},
-            {{ hdiop::VarType::Float3, "Cd" }},
-            {{ hdiop::VarType::Float3, "uv" }},
-            {{ hdiop::VarType::Float3, "N" }},
+            {{ dag::VarType::Float3, "P" }},
+            {{ dag::VarType::Float3, "Cd" }},
+            {{ dag::VarType::Float3, "uv" }},
+            {{ dag::VarType::Float3, "N" }},
 
-            {{ hdiop::VarType::Int,    "ptnum" }},
-            {{ hdiop::VarType::Int,    "primnum" }},
-            {{ hdiop::VarType::Int,    "vtxnum" }},
-            {{ hdiop::VarType::Int,    "numpt" }},
-            {{ hdiop::VarType::Int,    "numprim" }},
-            {{ hdiop::VarType::Int,    "numvtx" }}
+            {{ dag::VarType::Int,    "ptnum" }},
+            {{ dag::VarType::Int,    "primnum" }},
+            {{ dag::VarType::Int,    "vtxnum" }},
+            {{ dag::VarType::Int,    "numpt" }},
+            {{ dag::VarType::Int,    "numprim" }},
+            {{ dag::VarType::Int,    "numvtx" }}
         };
     }
 
-    virtual hdiop::Variable Eval(size_t idx) const override;
+    virtual dag::Variable Eval(size_t idx) const override;
 
     void SetPos(const sm::vec3& pos) { m_pos = pos; }
     void SetColor(const sm::vec3& color) { m_color = color; }

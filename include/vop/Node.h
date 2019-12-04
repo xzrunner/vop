@@ -1,23 +1,23 @@
 #pragma once
 
-#include <hdiop/Node.h>
-#include <hdiop/Variable.h>
+#include <dag/Node.h>
+#include <dag/Variable.h>
 
 #include <SM_Vector.h>
 
 namespace vop
 {
 
-class Node : public hdiop::Node<hdiop::VarType>
+class Node : public dag::Node<dag::VarType>
 {
 public:
     Node(size_t build_in_count = 0);
 
-    virtual hdiop::Variable Eval(size_t idx) const = 0;
+    virtual dag::Variable Eval(size_t idx) const = 0;
 
     virtual void AddInputPorts(size_t num) {}
 
-    RTTR_ENABLE(hdiop::Node<hdiop::VarType>)
+    RTTR_ENABLE(dag::Node<dag::VarType>)
 
 }; // Node
 

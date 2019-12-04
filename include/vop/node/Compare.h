@@ -2,7 +2,7 @@
 
 #include "vop/Node.h"
 
-#include <hdiop/Variable.h>
+#include <dag/Variable.h>
 
 namespace vop
 {
@@ -26,25 +26,25 @@ public:
     Compare()
     {
         m_imports = {
-            {{ hdiop::VarType::Any, "input1" }},
-            {{ hdiop::VarType::Any, "input2" }}
+            {{ dag::VarType::Any, "input1" }},
+            {{ dag::VarType::Any, "input2" }}
         };
         m_exports = {
-            {{ hdiop::VarType::Bool, "bool" }}
+            {{ dag::VarType::Bool, "bool" }}
         };
     }
 
-    virtual hdiop::Variable Eval(size_t idx) const override;
+    virtual dag::Variable Eval(size_t idx) const override;
 
 private:
-    static bool CalcEqual(const hdiop::Variable& v0, const hdiop::Variable& v1);
-    static bool CalcLess(const hdiop::Variable& v0, const hdiop::Variable& v1);
-    static bool CalcGreater(const hdiop::Variable& v0, const hdiop::Variable& v1);
+    static bool CalcEqual(const dag::Variable& v0, const dag::Variable& v1);
+    static bool CalcLess(const dag::Variable& v0, const dag::Variable& v1);
+    static bool CalcGreater(const dag::Variable& v0, const dag::Variable& v1);
 
     RTTR_ENABLE(Node)
 
 #define PARM_FILEPATH "vop/node/Compare.parm.h"
-#include <hdiop/node_parms_gen.h>
+#include <dag/node_parms_gen.h>
 #undef PARM_FILEPATH
 
 }; // Compare

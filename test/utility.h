@@ -1,12 +1,12 @@
 #pragma once
 
-#include <hdiop/Variable.h>
+#include <dag/Variable.h>
 
 namespace test
 {
 
 void init();
 
-void check_value_approx(const hdiop::Variable& v0, const hdiop::Variable& v1);
+void check_value_approx(const dag::Variable& v0, const dag::Variable& v1);
 
 }

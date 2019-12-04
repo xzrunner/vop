@@ -30,15 +30,15 @@ TEST_CASE("compare")
         cmp->SetCmpType(vop::node::Compare::CmpType::Equal);
 
         v0->SetConstType(vop::node::Constant::Type::ConstInteger);
-        v0->SetConstValue(hdiop::Variable(1));
+        v0->SetConstValue(dag::Variable(1));
 
         v1->SetConstType(vop::node::Constant::Type::ConstInteger);
-        v1->SetConstValue(hdiop::Variable(2));
+        v1->SetConstValue(dag::Variable(2));
 
-        REQUIRE(cmp->Eval(0) == hdiop::Variable(false));
+        REQUIRE(cmp->Eval(0) == dag::Variable(false));
 
-        v0->SetConstValue(hdiop::Variable(2));
-        REQUIRE(cmp->Eval(0) == hdiop::Variable(true));
+        v0->SetConstValue(dag::Variable(2));
+        REQUIRE(cmp->Eval(0) == dag::Variable(true));
     }
 
     SECTION("<")
@@ -46,15 +46,15 @@ TEST_CASE("compare")
         cmp->SetCmpType(vop::node::Compare::CmpType::LessThan);
 
         v0->SetConstType(vop::node::Constant::Type::ConstFloat);
-        v0->SetConstValue(hdiop::Variable(1.1f));
+        v0->SetConstValue(dag::Variable(1.1f));
 
         v1->SetConstType(vop::node::Constant::Type::ConstFloat);
-        v1->SetConstValue(hdiop::Variable(1.2f));
+        v1->SetConstValue(dag::Variable(1.2f));
 
-        REQUIRE(cmp->Eval(0) == hdiop::Variable(true));
+        REQUIRE(cmp->Eval(0) == dag::Variable(true));
 
-        v1->SetConstValue(hdiop::Variable(0.2f));
-        REQUIRE(cmp->Eval(0) == hdiop::Variable(false));
+        v1->SetConstValue(dag::Variable(0.2f));
+        REQUIRE(cmp->Eval(0) == dag::Variable(false));
     }
 
     SECTION(">")
@@ -62,15 +62,15 @@ TEST_CASE("compare")
         cmp->SetCmpType(vop::node::Compare::CmpType::GreaterThan);
 
         v0->SetConstType(vop::node::Constant::Type::ConstFloat);
-        v0->SetConstValue(hdiop::Variable(1.1f));
+        v0->SetConstValue(dag::Variable(1.1f));
 
         v1->SetConstType(vop::node::Constant::Type::ConstFloat);
-        v1->SetConstValue(hdiop::Variable(1.1f));
+        v1->SetConstValue(dag::Variable(1.1f));
 
-        REQUIRE(cmp->Eval(0) == hdiop::Variable(false));
+        REQUIRE(cmp->Eval(0) == dag::Variable(false));
 
-        v1->SetConstValue(hdiop::Variable(0.2f));
-        REQUIRE(cmp->Eval(0) == hdiop::Variable(true));
+        v1->SetConstValue(dag::Variable(0.2f));
+        REQUIRE(cmp->Eval(0) == dag::Variable(true));
     }
 
     SECTION("<=")
@@ -78,15 +78,15 @@ TEST_CASE("compare")
         cmp->SetCmpType(vop::node::Compare::CmpType::LessThanOrEqual);
 
         v0->SetConstType(vop::node::Constant::Type::ConstFloat);
-        v0->SetConstValue(hdiop::Variable(1.1f));
+        v0->SetConstValue(dag::Variable(1.1f));
 
         v1->SetConstType(vop::node::Constant::Type::ConstFloat);
-        v1->SetConstValue(hdiop::Variable(1.1f));
+        v1->SetConstValue(dag::Variable(1.1f));
 
-        REQUIRE(cmp->Eval(0) == hdiop::Variable(true));
+        REQUIRE(cmp->Eval(0) == dag::Variable(true));
 
-        v0->SetConstValue(hdiop::Variable(0.2f));
-        REQUIRE(cmp->Eval(0) == hdiop::Variable(true));
+        v0->SetConstValue(dag::Variable(0.2f));
+        REQUIRE(cmp->Eval(0) == dag::Variable(true));
     }
 
     SECTION(">=")
@@ -94,15 +94,15 @@ TEST_CASE("compare")
         cmp->SetCmpType(vop::node::Compare::CmpType::GreaterThanOrEqual);
 
         v0->SetConstType(vop::node::Constant::Type::ConstFloat);
-        v0->SetConstValue(hdiop::Variable(1.1f));
+        v0->SetConstValue(dag::Variable(1.1f));
 
         v1->SetConstType(vop::node::Constant::Type::ConstFloat);
-        v1->SetConstValue(hdiop::Variable(1.1f));
+        v1->SetConstValue(dag::Variable(1.1f));
 
-        REQUIRE(cmp->Eval(0) == hdiop::Variable(true));
+        REQUIRE(cmp->Eval(0) == dag::Variable(true));
 
-        v1->SetConstValue(hdiop::Variable(0.2f));
-        REQUIRE(cmp->Eval(0) == hdiop::Variable(true));
+        v1->SetConstValue(dag::Variable(0.2f));
+        REQUIRE(cmp->Eval(0) == dag::Variable(true));
     }
 
     SECTION("!=")
@@ -110,14 +110,14 @@ TEST_CASE("compare")
         cmp->SetCmpType(vop::node::Compare::CmpType::NotEqual);
 
         v0->SetConstType(vop::node::Constant::Type::ConstFloat);
-        v0->SetConstValue(hdiop::Variable(1.1f));
+        v0->SetConstValue(dag::Variable(1.1f));
 
         v1->SetConstType(vop::node::Constant::Type::ConstFloat);
-        v1->SetConstValue(hdiop::Variable(1.1f));
+        v1->SetConstValue(dag::Variable(1.1f));
 
-        REQUIRE(cmp->Eval(0) == hdiop::Variable(false));
+        REQUIRE(cmp->Eval(0) == dag::Variable(false));
 
-        v0->SetConstValue(hdiop::Variable(0.2f));
-        REQUIRE(cmp->Eval(0) == hdiop::Variable(true));
+        v0->SetConstValue(dag::Variable(0.2f));
+        REQUIRE(cmp->Eval(0) == dag::Variable(true));
     }
 }

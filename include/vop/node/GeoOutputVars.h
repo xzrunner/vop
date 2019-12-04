@@ -21,13 +21,13 @@ public:
     GeoOutputVars()
     {
         m_imports = {
-            {{ hdiop::VarType::Float3, "P" }},
-            {{ hdiop::VarType::Float3, "Cd" }},
-            {{ hdiop::VarType::Float3, "N" }}
+            {{ dag::VarType::Float3, "P" }},
+            {{ dag::VarType::Float3, "Cd" }},
+            {{ dag::VarType::Float3, "N" }}
         };
     }
 
-    virtual hdiop::Variable Eval(size_t idx) const override;
+    virtual dag::Variable Eval(size_t idx) const override;
 
     sm::vec3 GetPos() const;
     sm::vec3 GetColor() const;

@@ -5,10 +5,10 @@ namespace vop
 namespace node
 {
 
-hdiop::Variable Constant::Eval(size_t idx) const 
+dag::Variable Constant::Eval(size_t idx) const 
 {
     if (idx != 0) {
-        return hdiop::Variable();
+        return dag::Variable();
     }
 
     return m_const_value;
