@@ -4,4 +4,4 @@
 
 PARAM_INFO(ConstType,  Constant::Type,  consttype,  m_const_type,  (Constant::Type::ConstFloat))
 PARAM_INFO(ConstValue, dag::Variable, constvalue, m_const_value, ())
-PARAM_INFO(ConstName,  String,          constname,  m_const_name,  ())
+PARAM_INFO(ConstName,  std::string,          constname,  m_const_name,  ())
